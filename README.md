@@ -7,6 +7,8 @@ HTTPS-CMS представляет из себя систему объеденя
 и позволяющюю безопасно использовать инструменты без необходимости вводить пароль от каждого инструмента, благодоря центральной системе авторизации.  
 
 ![screenshot](https://raw.githubusercontent.com/Windows-Mining-Edition/https-cms/main/screenshots/view.png)
+
+Официальный сайт HTTPS-CMS: https://https-cms.ru/
   
 Данная система поставляется с такими инструментами как:  
 1)Textolite  
