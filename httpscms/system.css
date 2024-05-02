@@ -1,0 +1,339 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+h1 {font-size: 1.5em;margin-bottom: 10px;}
+p{font-size: 1em;line-height: 1.3em;margin-bottom: 10px;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+   body {
+    cursor: url(cursors/cursor.cur), pointer;
+
+   }
+
+input{
+        cursor: url(cursors/link.cur), pointer;
+}
+
+select{
+        cursor: url(cursors/link.cur), pointer;
+}
+
+a{
+        cursor: url(cursors/link.cur), pointer;
+}
+
+.window {
+cursor: url(cursors/alternate.cur), pointer;
+    position: absolute;
+    border: 2px solid #000;
+    background: #EEE;
+    border-radius: 5px;
+    z-index: 1000;
+    display: flex; /* Добавляем эту строку */
+    flex-direction: column; /* Добавляем эту строку */
+}
+
+#icons {
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	left: 20px;
+}
+
+#icons a {
+    display: block;
+    cursor: pointer;
+    padding: 2px 10px;
+}
+#icons a:hover {
+cursor: url(cursors/link.cur), pointer;
+	background: #000;
+	color: #FFF;
+}
+
+.taskbarPanel.activeTab {
+	background: #FFF;
+}
+.taskbarPanel.minimizedTab {
+	background: #AAA;	
+}
+.taskbarPanel.minimizedTab:hover {
+	background: #DDD;
+}
+
+.activeWindow .windowHeader {
+    background-color: #8888d6;
+cursor: url(cursors/precision.cur), pointer;
+}
+
+.windowHeader {
+    background-color: #b7b7e0;
+    text-align: right;
+    border-bottom: 2px solid #000;
+    padding: 2px;
+    cursor: url(cursors/precision.cur), pointer;
+    height: 28px;
+}
+
+.windowHeader > span.winclose:hover {
+	background: #f15454;
+cursor: url(cursors/link.cur), pointer;
+}
+
+.winmaximize > span {
+	border: 2px solid #000;
+	border-top: 3px solid #000;
+cursor: url(cursors/link.cur), pointer;
+}
+
+.winminimize > span {
+	border-bottom: 3px solid #000;
+cursor: url(cursors/link.cur), pointer;
+}
+
+.winmaximize > span:nth-child(2) {
+	display: none;
+cursor: url(cursors/link.cur), pointer;
+}
+.fullSizeWindow .winmaximize > span:nth-child(1) {
+	margin: 2px 0 0 -4px;
+cursor: url(cursors/link.cur), pointer;
+}
+.fullSizeWindow .winmaximize > span:nth-child(2) {
+    display: inline-block;
+    top: 3px;
+    left: 12px;
+cursor: url(cursors/link.cur), pointer;
+}
+
+
+.wincontent {
+    padding: 10px;
+    min-width: 200px;
+    min-height: 140px;
+    border: 2px solid #000;
+    margin: 2px;
+	border-radius: 0 0 5px 5px;
+
+}
+.windowHeader > strong {
+    float: left;
+    margin: 0px 3px 0 10px;
+    line-height: 29px;
+    font-size: 17px;
+
+}
+
+
+.taskbarPanel.closed {
+	display: none;
+cursor: url(cursors/link.cur), pointer;
+}
+
+.windowHeader > span:hover {
+	background: rgba(255,255,255,0.3);
+cursor: url(cursors/link.cur), pointer;
+}
+
+.windowHeader > span > span {
+    display: inline-block;
+    height: 8px;
+    width: 10px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+
+}
+
+
+
+#templateLink {
+cursor: url(cursors/link.cur), pointer;
+    position: absolute;
+    display: inline-block;
+    bottom: 10px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #30478c;
+}
+
+#taskbar {
+	position: absolute;
+	height: 32px;
+	border-top: 2px solid #000;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #EEE;
+}
+
+.taskbarPanel {
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 5px;
+    line-height: 24px;
+    margin: 2px 0 0 10px;
+    font-size: 17px;
+    padding: 0 10px;
+    background: #CCC;
+    font-weight: bold;
+	cursor: url(cursors/link.cur), pointer;
+}
+
+.window.closed {
+	display: none;
+}
+.window.minimizedWindow {
+	display: none;
+}
+.window.fullSizeWindow {
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    border-radius: 0;
+    bottom: 32px !important;
+}
+.fullSizeWindow .ui-resizable-handle {
+	display: none;
+}
+
+
+.windowHeader > span {
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #000;
+    margin-left: 4px;
+    font-size: 19px;
+    padding: 2px 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    border-radius: 5px;
+    line-height: 20px;
+    width: 12px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.windowHeader > span:hover {
+	background: rgba(255,255,255,0.3);
+}
+
+.windowHeader > span > span {
+    display: inline-block;
+    height: 8px;
+    width: 10px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
+
+.winmaximize > span:nth-child(2) {
+	display: none;
+}
+.fullSizeWindow .winmaximize > span:nth-child(1) {
+	margin: 2px 0 0 -4px;
+}
+.fullSizeWindow .winmaximize > span:nth-child(2) {
+    display: inline-block;
+    top: 3px;
+    left: 12px;
+}
+.wincontent {
+    padding: 10px;
+    min-width: 200px;
+    min-height: 140px;
+    border: 2px solid #000;
+    margin: 2px;
+	border-radius: 0 0 5px 5px;
+}
+.windowHeader > strong {
+    float: left;
+    margin: 0px 3px 0 10px;
+    line-height: 29px;
+    font-size: 17px;
+}
+
+
+.taskbarPanel.closed {
+	display: none;
+}
+
+
+
+
+/*Demo styles BEGIN*/
+#window0 {	top: 20px;	left: 240px;}
+#window1 {	top: 400px; left: 120px;}
+#window2 {	top: 250px; left: 300px;}
+#window3 {	top: 125px; left: 420px;}
+#window4 {	top: 125px; left: 420px;}
+#window5 {	top: 125px; left: 420px;}
+#window6 {	top: 125px; left: 420px;}
+#window7 {	top: 125px; left: 420px;}
+#window8 {	top: 125px; left: 420px;}
+#window9 {	top: 125px; left: 420px;}
+#window10 {	top: 125px; left: 420px;}
+#window11 {	top: 125px; left: 420px;}
+#window12 {	top: 125px; left: 420px;}
+#window13 {	top: 125px; left: 420px;}
+
+#window0 .wincontent {	width: 660px; height: 400px;	}
+#window1 .wincontent {	width: 800px; height: 500px;	}
+#window2 .wincontent {	width: 800px; height: 400px;	}
+#window3 .wincontent {	width: 800px; height: 400px;	}
+#window4 .wincontent {	width: 400px; height: 350px;	}
+#window5 .wincontent {	width: 400px; height: 350px;	}
+#window6 .wincontent {	width: 400px; height: 350px;	}
+#window7 .wincontent {	width: 400px; height: 350px;	}
+#window8 .wincontent {	width: 400px; height: 350px;	}
+#window9 .wincontent {	width: 400px; height: 350px;	}
+#window10 .wincontent {	width: 400px; height: 350px;	}
+#window11 .wincontent {	width: 400px; height: 350px;	}
+#window12 .wincontent {	width: 840px; height: 480px;	}
+#window13 .wincontent {	width: 950px; height: 400px;	}
+#window14 .wincontent {	width: 400px; height: 350px;	}
+#window15 .wincontent {	width: 600px; height: 500px;	}
+
+
+@media screen and (max-width:960px){
+	#window0 {	left: 10px;	}
+	#window2 {	left: 100px;	}
+	#window3 {	left: 150px;	}
+	#window4 {	left: 150px;	}
+	#window5 {	left: 150px;	}
+	#window6 {	left: 150px;	}
+	#window7 {	left: 150px;	}
+	#window8 {	left: 150px;	}
+	#window9 {	left: 150px;	}
+	#window10 {	left: 150px;	}
+	#window11 {	left: 150px;	}
+	#window12 {	left: 150px;	}
+	#window13 {	left: 150px;	}
+}
+@media screen and (max-width:770px){
+	#window0 .wincontent {	width: 460px;	}
+	#window2 {	left: 100px;	}
+	#window1 {	top: 190px;	left: -5px;	}
+}
+@media screen and (max-width:540px){
+#window0 .wincontent {	width: 230px; height: 200px;	}
+#window2 .wincontent {	width: 230px; height: 200px;	}
+#window3 .wincontent {
+    width: 275px;
+    height: auto;
+}
+#window3 {    top: 9px;    left: 10px;	}
+
+#window1 .wincontent {    width: auto;    height: 300px;	}
+}
