@@ -7,3 +7,60 @@ HTTPS-CMS представляет из себя систему объеденя
 и позволяющюю безопасно использовать инструменты без необходимости вводить пароль от каждого инструмента, благодоря центральной системе авторизации.
 
 ![screenshot](https://raw.githubusercontent.com/Windows-Mining-Edition/https-cms/main/screenshots/view.png)
+
+Данная система поставляется с такими инструментами как:
+1)Textolite
+2)PhpMiniAdmin for MySQL
+3)CMSLAND
+4)PHP File Manager
+
+
+Плюсы:
+1)Не требует SQL
+2)Можно подключить авторизацию через HTTPS-CMS, на страницах сайта, преднозначеных только для администрации. Пример:
+```
+<?php
+session_start();
+
+if(isset($_GET['logout'])) {
+	unset($_SESSION['logged']);
+
+echo "<h2>Обновите страницу</h2>";
+exit;
+}
+
+$login = 'httpscms/system/cfg/login.php';
+include("httpscms/system/cfg/login.php"); 
+
+$random1 = 'secret_key1';
+$random2 = 'secret_key2';
+$hash = md5($random1.$password.$random2); 
+
+
+	if (isset($_SESSION['logged']) && $_SESSION['logged'] == $hash) { 
+echo "Добро пожаловать";
+
+
+} else {
+
+echo '<meta http-equiv="Refresh" content="0; URL=httpscms/security/nd.php">';
+
+exit;
+}
+```
+
+Попытки доступа 3-х лиц, к  страницам настроеным на авторизацию через HTTPS-CMS, как и внутреним страницам системы будут фиксироваться в журнале попыток неправомерного доступа, открыть который можно выполнив в терминале команду secinf.
+
+Для очистки журнала попыток неправомерного доступа, достаточно выполнить команду очистки кэша ucash.
+
+
+
+
+
+
+
+Дополнительно:
+1)Есть возможность смены обоев, для нескучной разработки
+2)Можно установить свои курсоры
+3)Можно кастомизировать систему для установки других инструментов
+
