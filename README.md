@@ -7,3 +7,6 @@ HTTPS-CMS представляет из себя систему объеденя
 и позволяющюю безопасно использовать инструменты без необходимости вводить пароль от каждого инструмента, благодоря центральной системе авторизации.
 
 ![alt text](http://url/to/img.png](https://raw.githubusercontent.com/Windows-Mining-Edition/https-cms/main/screenshots/view.png)
+
+
+![screenshot](https://raw.githubusercontent.com/Windows-Mining-Edition/https-cms/main/screenshots/view.png)
